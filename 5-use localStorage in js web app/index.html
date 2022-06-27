@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+  </head>
+  <body>
+    <input type="text"></input>
+    <select id="choose">
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Orange</option>
+    </select>
+    <script>
+      
+      let select = document.getElementById('choose'),
+       input = document.querySelector("input");
+      select.addEventListener("change", selectFruit);//change-event in select
+      function selectFruit(e) {
+        console.log(e.target.value);
+        localStorage.setItem("fruit", e.target.value);
+      }
+      let fruit = localStorage.getItem("fruit");
+      if (fruit) {
+        select.value = fruit;
+      }
+      input.addEventListener("input", addInput);//input-event in input
+      function addInput (e) {
+        console.log(e.target.value);
+        localStorage.setItem("input", e.target.value) 
+      }
+      let inputValue = localStorage.getItem("input");
+      if (inputValue) {
+        input.value = inputValue;
+      }
+    </script>
+  </body>
+</html>

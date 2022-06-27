@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>employees</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <!--input field-->
+          <form
+            id="first-form"
+            class="employee-form"
+            onsubmit="event.preventDefault();collectData();"
+          >
+            <div>
+              <label>Employee Name: </label
+              ><label id="hide" hidden>*this field is Mandatory</label>
+              <input type="text" id="empName" />
+            </div>
+            <div>
+              <label>Employee code: </label>
+              <input type="text" id="empCode" />
+            </div>
+            <div>
+              <label>Salary: </label>
+              <input type="text" id="Salary" />
+            </div>
+            <div>
+              <label>Employee Position: </label>
+              <input type="text" id="position" />
+            </div>
+            <div><input type="submit" value="Submit" /></div>
+          </form>
+        </td>
+        <td>
+          <!--showed data-->
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Emp. Name</th>
+                <th>Emp. Code</th>
+                <th>Salary</th>
+                <th>Position</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="employeeList"></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>

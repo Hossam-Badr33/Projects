@@ -1,0 +1,93 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0
+}
+body {
+    background-color: black;
+    color:antiquewhite
+}
+section nav ul {
+    list-style: none;
+}
+section nav ul li {
+    display: inline-block;
+}
+section nav ul li a {
+    color: yellow;
+    padding: 15px;
+    font-family:Aladin;
+    font-size: 30px;
+    text-shadow: 2px 10px 13px yellow;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+
+.first-img {
+    width:1000px;
+    height:800px;
+    transition: all .3s ease-in-out;
+    animation: iron 3s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+}
+@keyframes iron {
+    0% {
+        transform:translatex(-250px)
+    }
+    100% {
+        transform:translatex(250px)
+    }
+}
+.first-img:after {
+    content:"yep, we are all kinds of stubborn";
+    color:bisque;
+    font-size: 20px;
+    position: relative;
+    top:0;
+    left: 0
+}
+p:first-of-type,  p:nth-of-type(2), p:nth-of-type(3){
+    margin: 50px 300px;
+    color:rgb(140, 140, 206);
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+div.img {
+    width:700px;
+    height: 370px;
+    background: url("https://i.insider.com/577d2929dd0895d15e8b45a1?width=1100&format=jpeg&auto=webp");
+    float:left;
+    background-size: cover
+}
+p:nth-of-type(2) {
+    margin: 85px 270px
+}
+p:nth-of-type(3) {
+    margin: 220px 270px
+}
+p:nth-of-type(3) a{
+    color: yellow;
+    text-decoration:underline dashed;
+    text-shadow: 3px -1px 4px yellow
+}
+footer {
+    margin:100px 450px;
+}
+footer a {
+    padding: 20px;
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+p:last-of-type {
+    margin: 10px 552px;
+    color: red;
+    font-size: 13px;
+    font-family:monospace
+}

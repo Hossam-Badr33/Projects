@@ -1,0 +1,60 @@
+table {
+  border-collapse: collapse;
+}
+table > lable {
+  width: 50%;
+}
+#hide {
+  color: red;
+  font-size: 10px;
+  margin-right: 0;
+}
+td {
+  border: 2px solid #991;
+}
+.employee-form {
+  width: 60%;
+  height: 50%;
+}
+div {
+  margin: 10px;
+}
+div > input {
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+}
+.employee-form div:last-child {
+  text-align: left;
+}
+.employee-form div:last-child input {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  float: right;
+  margin-right: -50px;
+  cursor: pointer;
+}
+
+.list {
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -30px;
+}
+.list th {
+  background-color: #991;
+  padding: 10px;
+  margin-left: 0;
+}
+.list td {
+  border: 3px solid rgb(46, 77, 172);
+  padding: 5px;
+}
+.list a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: rgb(46, 77, 172);
+  cursor: pointer;
+  text-align: center;
+}
