@@ -9,6 +9,7 @@
   --words-no-2: #70380f;
   --words-no-3: #ff1a40;
   --words-no-4: #ac9a92;
+  --words-no-5: #74655c;
 }
 * {
   padding: 0;
@@ -176,10 +177,15 @@ body {
 /*.sections*/
 .sections {
   position: relative;
+  max-width: 75%;
   top: 50px;
   left: 300px;
 }
 /*.home*/
+.home {
+  width: 100%;
+  justify-content: space-between;
+}
 /*.home-text*/
 .home-text {
   flex: 0 0 50%;
@@ -219,7 +225,9 @@ body {
 }
 /*.home-img*/
 .home-img {
+  display: flex;
   position: relative;
+  left: 150px;
 }
 .home-img::before {
   content: "";
@@ -258,4 +266,192 @@ body {
 .home-hire:hover {
   background-color: var(--bg-grade-III);
   font-size: 30px;
+}
+/*==================.about======================*/
+.about {
+  flex-wrap: wrap;
+}
+.about-header {
+  flex: 0 0 90%;
+  max-width: 90%;
+  color: var(--words-no-5);
+}
+.about-job {
+  color: var(--words-no-3);
+  font-size: 20px;
+}
+.about-paragraph {
+  color: var(--words-no-5);
+}
+.personal-informations {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about-informations1 {
+  height: 200px;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about-personal,
+.about-informations2,
+.about-skills {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-personal,
+.about-informations2 {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.about-informations2 {
+  margin-left: 20px;
+}
+.personal-items,
+.informations2-items {
+  color: var(--words-no-2);
+  font-weight: normal;
+  font-size: 15px;
+  margin-left: 3px;
+}
+.about-skills {
+  flex: 0 0 40%;
+  max-width: 35%;
+  margin-left: 35px;
+}
+.skill1,
+.skill2,
+.skill3,
+.skill4,
+.skill5,
+.skill6 {
+  justify-content: space-between;
+  color: var(--bg-grade-I);
+  text-shadow: 1px 1px 3px #000;
+  position: relative;
+}
+.skill1::before {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-3);
+  width: 272px;
+  height: 5px;
+  left: 1px;
+  top: 21px;
+}
+.skill1::after {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-4);
+  width: 48px;
+  height: 5px;
+  left: 273px;
+  top: 21px;
+}
+.skill2::before {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-3);
+  width: 256px;
+  height: 5px;
+  left: 1px;
+  top: 21px;
+}
+.skill2::after {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-4);
+  width: 64px;
+  height: 5px;
+  left: 257px;
+  top: 21px;
+}
+.skill3::before {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-3);
+  width: 224px;
+  height: 5px;
+  left: 1px;
+  top: 21px;
+}
+.skill3::after {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-4);
+  width: 96px;
+  height: 5px;
+  left: 225px;
+  top: 21px;
+}
+.skill4::before {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-3);
+  width: 288px;
+  height: 5px;
+  left: 1px;
+  top: 21px;
+}
+.skill4::after {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-4);
+  width: 32px;
+  height: 5px;
+  left: 287px;
+  top: 21px;
+}
+.skill5::before {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-3);
+  width: 160px;
+  height: 5px;
+  left: 1px;
+  top: 21px;
+}
+.skill5::after {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-4);
+  width: 160px;
+  height: 5px;
+  left: 162px;
+  top: 21px;
+}
+.skill6::before {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-3);
+  width: 224px;
+  height: 5px;
+  left: 1px;
+  top: 21px;
+}
+.skill6::after {
+  content: "";
+  position: absolute;
+  background-color: var(--words-no-4);
+  width: 96px;
+  height: 5px;
+  left: 225px;
+  top: 21px;
+}
+/* .btn-educEx {
+  background-color: yellow;
+} */
+.btn-educEx .btn:first-of-type,
+.btn-educEx .btn:last-of-type {
+  margin: 20px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.btn-educEx .btn:last-of-type {
+  width: 100px;
+}
+.btn-educEx .btn:first-of-type:hover,
+.btn-educEx .btn:last-of-type:hover {
+  background-color: var(--bg-grade-III);
 }
