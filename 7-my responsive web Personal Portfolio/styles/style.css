@@ -58,9 +58,9 @@
 body {
   font-size: 16px;
   font-family: "Raleway", Geneva;
+  background-color: var(--bg-grade-III);
 }
 .main-page {
-  background-color: var(--bg-grade-III);
   /* overflow-x: hidden; */
 }
 .btn {
@@ -208,8 +208,8 @@ body {
   justify-content: space-between;
 }
 .home-text {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 60%;
+  max-width: 60%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -244,30 +244,34 @@ body {
   font-size: 20px;
 }
 .home-img {
-  display: flex;
-  position: relative;
-  left: 150px;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
-.home-img::before {
+.image-container {
+  position: relative;
+  width: 282px;
+  right: -40px;
+}
+.image-container::before {
   content: "";
   position: absolute;
   height: 120px;
   width: 120px;
   border-right: 10px solid var(--words-no-3);
   border-top: 10px solid var(--words-no-3);
-  top: -20px;
-  right: -30px;
+  top: -22px;
+  right: -43px;
   border-bottom-right-radius: 12px;
   border-top-left-radius: 12px;
 }
-.home-img::after {
+.image-container::after {
   content: "";
   position: absolute;
   height: 120px;
   width: 120px;
   border-left: 10px solid var(--words-no-3);
   border-bottom: 10px solid var(--words-no-3);
-  bottom: 60px;
+  bottom: -18px;
   left: -25px;
   border-bottom-right-radius: 12px;
   border-top-left-radius: 12px;
@@ -485,7 +489,6 @@ body {
 .about-education {
   flex: 0 0 90%;
   max-width: 90%;
-  height: 130%;
   position: relative;
   left: 30px;
   height: 89%;
@@ -495,8 +498,8 @@ body {
   position: absolute;
   background-color: var(--words-no-3);
   width: 2px;
-  height: 87%;
-  top: 107px;
+  height: 88%;
+  top: 104px;
   left: 16px;
 }
 .about-education .education-header {
@@ -519,6 +522,9 @@ body {
   top: 20px;
   left: -20px;
 }
+.education-section {
+  max-height: 100%;
+}
 .about-education .education-section i {
   font-size: 15px;
   margin: 20px auto;
@@ -533,6 +539,11 @@ body {
 .education-section .edSecContent {
   color: var(--words-no-5);
   width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 /*.services*/
 .services {
@@ -575,6 +586,7 @@ body {
 .portfolio-container {
   margin-top: 30px;
   flex-wrap: wrap;
+  margin-left: 53px;
 }
 .portfolio-container-header {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -726,21 +738,134 @@ body {
   background-color: var(--bg-grade-III);
 }
 /*media*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .aside {
     display: none;
   }
-  .sections {
-    margin-left: -277px;
+  .main-page {
+    width: 100%;
   }
-  .home-name {
-    display: block;
+  .sections {
+    left: 0;
+    max-width: 100%;
+  }
+  .home-img {
+    flex: 1 1 40%;
+  }
+  .about-skills {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-page {
+    width: 70%;
+  }
+  .sections {
+    left: 100px;
+    max-width: 95%;
+  }
+  .home-text {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  .image-container::before {
+    right: 50px;
+  }
+  .home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .home-img img {
+    width: 200px;
+  }
+  .home-head2 {
+    animation: job 3s infinite ease-in-out;
+  }
+  @keyframes job {
+    0% {
+      transform: translateX(-50px);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
   }
   .home-hire {
+    height: 40px;
     left: 10px;
-    top:  411px;
+    top: 450px;
   }
-  .home-paragraph {
-    font-size: 15px;
+  .about-header {
+    flex: 1 1 90%;
+    max-width: 90%;
+    background-color: #ffff80;
+  }
+  .about-informations1 {
+    flex-wrap: wrap;
+  }
+  .about-personal {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  .about-informations2 {
+    flex: 1 1 53%;
+    max-width: 53%;
+  }
+  .about-skills {
+    flex: 1 1 92%;
+    max-width: 92%;
+    height: 150px;
+    margin-left: 0;
+  }
+  .about-skills * {
+    height: 10px;
+  } 
+  /*.skill1::before {
+    width: 272px;
+  }
+  .skill1::after {
+    width: 48px;
+    left: 274px;
+  }
+  .skill2::before {
+    width: 80%;
+  }
+  .skill2::after {
+    width: 20%;
+    left: calc(320px + 10%);
+  }
+  .skill3::before {
+    width: 70%;
+  }
+  .skill3::after {
+    width: 30%;
+    left: calc(320px);
+  }
+  .skill4::before {
+    width: 90%;
+  }
+  .skill4::after {
+    width: 10%;
+    left: calc(320px + 20%);
+  }
+  .skill5::before {
+    width: 50%;
+  }
+  .skill5::after {
+    width: 50%;
+    left: calc(320px - 25%);
+  }
+  */
+  .about-buttons {
+    position: relative;
+    top: 44px;
+    right: 6px;
+  }
+  .about-buttons .btn {
+    height: 40px; 
   }
 }
