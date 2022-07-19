@@ -117,7 +117,7 @@ body {
   border-right: 4px solid var(--words-no-3);
   width: 40px;
   height: 40px;
-  bottom: 532px;
+  top: 70px;
   right: 14px;
 }
 .aside .aside-nav {
@@ -531,6 +531,10 @@ body {
 .services-item:hover {
   box-shadow: 0 0 20px var(--bg-grade-I);
 }
+.services-item:hover i {
+  color: var(--bg-grade-I);
+  background-color: var(--words-no-3);
+}
 .services-item i {
   font-size: 25px;
   color: var(--words-no-3);
@@ -538,12 +542,7 @@ body {
   height: 50px;
   line-height: 50px;
   border-radius: 50%;
-  cursor: pointer;
   transition: all 0.3s ease-in;
-}
-.services-item i:hover {
-  color: var(--bg-grade-I);
-  background-color: var(--words-no-3);
 }
 .service-item-head {
   font-size: 25px;
@@ -879,7 +878,7 @@ body {
     }
     .image-container {
       width: 221px;
-      right: -70%;
+      right: -58%;
     }
     .image-container .my-image {
       width: 150px;
@@ -889,7 +888,7 @@ body {
       font-size: 16px;
     }
     .home-hire {
-      top: 6%;
+      top: 5%;
     }
     .about {
       width: 140%;
@@ -991,4 +990,84 @@ body {
       font-size: .9rem;
     }
   }
+  @media screen and (max-width: 480px) {
+    .main-page {
+      width: 100%;
+    }
+    .sections {
+      width: 480px;
+      left: 25px;
+    }
+    .home {
+      flex: 1 1 90%;
+      max-width: 90%;
+      height: 300px;
+    }
+    .home-img {
+      display: none;
+    }
+    .home-text {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .home-hire {
+      top: 5.5%;
+    }
+  }
+  .about, .services, .portfolio, .contact {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .about .about-header {
+    font-size: 1.2rem;
+  }
+  .about .personal-informations .about-informations1 {
+    flex: 0 0 97%;
+    max-width: 97%;
+  }
+  .about .about-header .about-job {
+    display: block;
+  }
+  .about .about-educEx {
+    margin-top: 95px;
+    flex-wrap: wrap;
+  }
+  .education-container, .experience-container {
+    flex: 0 0 92%;
+    max-width: 92%;;
+  }
+  .education-container {
+    margin-bottom: 5px;
+  }
+  .services .services-container .services-item {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .portfolio, .contact {
+    width: auto;
+  }
+  .portfolio .portfolio-container {
+    margin-left: 20px;
+  }
+  .portfolio .portfolio-container .portfolio-item {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .contact .contact-container .contact-items .contact-item1 ,
+    .contact .contact-container .contact-items .contact-item2 ,
+    .contact .contact-container .contact-items .contact-item3 ,
+    .contact .contact-container .contact-items .contact-item4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .contact-form .form-name, .contact-form .form-mail {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .form-name input, .form-mail input {
+      margin-top: auto;
+    }
+    .form-subject input {
+      width: 90%;
+    }
 }
