@@ -13,8 +13,27 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/color1.css" class="link-colors"/>
   </head>
   <body>
+    <div class="control-color-light reduce-width">
+      <div class="control-light-container">
+        <div class="fa-light">
+          <i class="fa fa-sun fa-lg" aria-hidden="true"></i>
+        </div>
+        <div class="fa-control">
+          <i class="fa-solid fa-cog fa-spin fa-lg"></i>
+        </div>
+        
+      </div>
+      <div class="control-color-container">
+        <span class="control-color-item choose-color1" data-link="styles/color1.css"></span>
+        <span class="control-color-item choose-color2" data-link="styles/color2.css"></span>
+        <span class="control-color-item choose-color3" data-link="styles/color3.css"></span>
+        <span class="control-color-item choose-color4" data-link="styles/color4.css"></span>
+        <span class="control-color-item choose-color5" data-link="styles/color5.css"></span>
+      </div>
+    </div>
     <div class="main-page">
       <!--==============aside start============-->
       <div class="aside">
@@ -23,23 +42,23 @@
         </div>
         <ul class="aside-nav">
           <li class="padding">
-            <a href=""><i class="fa-solid fa-house"></i><span>Home</span></a>
+            <a href="#home" class="color-scheme" data-scroll="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
           </li>
           <li class="padding">
-            <a href=""><i class="fa-brands fa-adn"></i><span>About</span></a>
+            <a href="#about" class="color-scheme" data-scroll="about"><i class="fa-brands fa-adn"></i><span>About</span></a>
           </li>
           <li class="padding">
-            <a href=""
+            <a href="#services" class="color-scheme" data-scroll="services"
               ><i class="fa-solid fa-display"></i><span>Services</span></a
             >
           </li>
           <li class="padding">
-            <a href=""
+            <a href="#portfolio" class="color-scheme" data-scroll="portfolio"
               ><i class="fa-solid fa-images"></i><span>Portfolio</span></a
             >
           </li>
           <li class="padding">
-            <a href=""
+            <a href="#contact" class="color-scheme" data-scroll="contact"
               ><i class="fa-solid fa-mobile-screen"></i
               ><span>Contact Me</span></a
             >
@@ -83,12 +102,12 @@
         </section>
         <!--============Home End==========-->
         <!--============About Start==========-->
-        <section class="about flex">
+        <section class="about flex hidden">
           <h1 class="section-header">About</h1>
-          <h1 class="about-header padding">
+          <h1 class="about-header moon-color padding">
             I'm Hossam Badr and I'm<span class="about-job"> Web Developer</span>
           </h1>
-          <p class="about-paragraph padding">
+          <p class="about-paragraph moon-color padding">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
             sunt cumque aperiam deserunt hic, saepe dolor aliquam, nesciunt
             incidunt, rerum asperiores atque eligendi illo iusto nulla
@@ -97,51 +116,51 @@
           <div class="personal-informations">
             <div class="about-informations1 flex padding">
               <ul class="about-personal">
-                <li>Nationality: <span class="personal-items">Egyptian</span></li>
-                <li>City: <span class="personal-items">Cairo</span></li>
-                <li>Degree: <span class="personal-items">B.SC</span></li>
-                <li>Freelance: <span class="personal-items">Available</span></li>
+                <li>Nationality: <span class="personal-items moon-color">Egyptian</span></li>
+                <li>City: <span class="personal-items moon-color">Cairo</span></li>
+                <li>Degree: <span class="personal-items moon-color">B.SC</span></li>
+                <li>Freelance: <span class="personal-items moon-color">Available</span></li>
               </ul>
               <ul class="about-informations2">
                 <li>
                   E-Mail:
-                  <span class="informations2-items">Hossambadr332@gmail.com</span>
+                  <span class="informations2-items moon-color">Hossambadr332@gmail.com</span>
                 </li>
                 <li>
-                  Mobile: <span class="informations2-items">+79508196777</span>
+                  Mobile: <span class="informations2-items moon-color">+79508196777</span>
                 </li>
                 <li>
-                  WahtsApp: <span class="informations2-items">+201220647374</span>
+                  WahtsApp: <span class="informations2-items moon-color">+201220647374</span>
                 </li>
                 <li>
                   Github:
-                  <span class="informations2-items"
+                  <span class="informations2-items moon-color"
                     >https://github.com/Hossam-Badr33</span
                   >
                 </li>
               </ul>
               <div class="about-skills">
-                <div class="skill1 flex">
+                <div class="skill1 flex moon-color">
                   <h4>HTML</h4>
                   <span>85%</span>
                 </div>
-                <div class="skill2 flex">
+                <div class="skill2 flex moon-color">
                   <h4>CSS</h4>
                   <span>80%</span>
                 </div>
-                <div class="skill3 flex">
+                <div class="skill3 flex moon-color">
                   <h4>Javascript</h4>
                   <span>70%</span>
                 </div>
-                <div class="skill4 flex">
+                <div class="skill4 flex moon-color">
                   <h4>jQuery</h4>
                   <span>90%</span>
                 </div>
-                <div class="skill5 flex">
+                <div class="skill5 flex moon-color">
                   <h4>Python MySQL</h4>
                   <span>50%</span>
                 </div>
-                <div class="skill6 flex">
+                <div class="skill6 flex moon-color">
                   <h4>Github</h4>
                   <span>70%</span>
                 </div>
@@ -158,19 +177,19 @@
             <div class="about-education ">
               <h2 class="education-header">Education</h2>
               <section class="education-section">
-                <i class="fa fa-calendar" aria-hidden="true"><span>2020-2022</span> </i>
+                <i class="fa fa-calendar" aria-hidden="true"><span >2020-2022</span> </i>
                 <h3 class="edSecHeader">Professional Courses</h3>
-                <p class="edSecContent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus facere molestiae reprehenderit laborum praesentium minus aliquid maxime deleniti, sit, necessitatibus eaque veniam consequatur dicta quos.</p>
+                <p class="edSecContent ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus facere molestiae reprehenderit laborum praesentium minus aliquid maxime deleniti, sit, necessitatibus eaque veniam consequatur dicta quos.</p>
               </section>
               <section class="education-section">
-                <i class="fa fa-calendar" aria-hidden="true"><span>2020-2022</span> </i>
+                <i class="fa fa-calendar" aria-hidden="true"><span >2020-2022</span> </i>
                 <h3 class="edSecHeader">Professional Courses</h3>
-                <p class="edSecContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
+                <p class="edSecContent ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
               </section>
               <section class="education-section">
-                <i class="fa fa-calendar" aria-hidden="true"><span>2020-2022</span> </i>
+                <i class="fa fa-calendar" aria-hidden="true"><span >2020-2022</span> </i>
                 <h3 class="edSecHeader">Professional Courses</h3>
-                <p class="edSecContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
+                <p class="edSecContent ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
               </section>
             </div>
           </div>
@@ -178,66 +197,66 @@
             <div class="about-education ">
               <h2 class="education-header">Experience</h2>
               <section class="education-section">
-                <i class="fa fa-calendar" aria-hidden="true"><span>2020-2022</span> </i>
+                <i class="fa fa-calendar" aria-hidden="true"><span >2020-2022</span> </i>
                 <h3 class="edSecHeader">Professional Courses</h3>
-                <p class="edSecContent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus facere molestiae reprehenderit laborum praesentium minus aliquid maxime deleniti, sit, necessitatibus eaque veniam consequatur dicta quos.</p>
+                <p class="edSecContent ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus facere molestiae reprehenderit laborum praesentium minus aliquid maxime deleniti, sit, necessitatibus eaque veniam consequatur dicta quos.</p>
               </section>
               <section class="education-section">
-                <i class="fa fa-calendar" aria-hidden="true"><span>2020-2022</span> </i>
+                <i class="fa fa-calendar" aria-hidden="true"><span >2020-2022</span> </i>
                 <h3 class="edSecHeader">Professional Courses</h3>
-                <p class="edSecContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
+                <p class="edSecContent ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
               </section>
               <section class="education-section">
-                <i class="fa fa-calendar" aria-hidden="true"><span>2020-2022</span> </i>
+                <i class="fa fa-calendar" aria-hidden="true"><span >2020-2022</span> </i>
                 <h3 class="edSecHeader">Professional Courses</h3>
-                <p class="edSecContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
+                <p class="edSecContent ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque saepe illo possimus dolorum tenetur expedita repellendus mollitia molestias recusandae officia sint, doloribus cum minus veniam modi eos dolorem earum excepturi nulla aspernatur! Nam dolor quo et illum eveniet. Voluptas.</p>
               </section>
             </div>
         </div>
         </section>
         <!--============About End==========-->
         <!--============Services start==========-->
-        <section class="services padding">
+        <section class="services padding hidden">
           <h1 class="services-header section-header">Services</h1>
           <div class="services-container flex">
             <div class="services-item">
               <i class="fas fa-mobile-alt"></i>
               <h4 class="service-item-head">web design</h4>
-              <p class="service-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
+              <p class="service-item-description moon-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
             </div>
             <div class="services-item">
               <i class="fas fa-desktop-alt"></i>
               <h4 class="service-item-head">web design</h4>
-              <p class="service-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
+              <p class="service-item-description moon-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
             </div>
             <div class="services-item">
               <i class='fas fa-palette'></i>
               <h4 class="service-item-head">web design</h4>
-              <p class="service-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
+              <p class="service-item-description moon-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
             </div>
             <div class="services-item">
               <i class="fa-brands fa-html5"></i>
               <h4 class="service-item-head">web design</h4>
-              <p class="service-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
+              <p class="service-item-description moon-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
             </div>
             <div class="services-item">
               <i class="fab fa-css3"></i>
               <h4 class="service-item-head">web design</h4>
-              <p class="service-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
+              <p class="service-item-description moon-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
             </div>
             <div class="services-item">
               <i class="fab fa-js"></i>
               <h4 class="service-item-head">web design</h4>
-              <p class="service-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
+              <p class="service-item-description moon-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at nobis voluptate libero quis nesciunt.</p>
             </div>
           </div>
         </section>
         <!--============Services End==========-->
         <!--============Portfolio start==========-->
-        <section class="portfolio">
+        <section class="portfolio hidden">
             <h1 class="portfolio-header section-header">Portfolio</h1>
             <div class="portfolio-container flex">
-              <h4 class="portfolio-container-header">
+              <h4 class="portfolio-container-header moon-color">
                 My recent Projects:
               </h4>
               <div class="portfolio-item">
@@ -263,7 +282,7 @@
         <!--============Portfolio End==========-->
         <!--============Contact Start==========-->
         <section class="contact">
-          <h1 class="contact-header section-header">Contact Me</h1>
+          <h1 class="contact-header section-header hidden">Contact Me</h1>
           <div class="contact-container padding">
             <h3 class="contact-container-head1">Have any Questions ?</h3>
             <h4 class="contact-container-content1">I'm in your Service</h4>
@@ -271,22 +290,22 @@
               <div class="contact-item1">
                 <i class="fas fa-phone"></i>
                 <p>call me on</p>
-                <p>+79508196777</p>
+                <p class="moon-color">+79508196777</p>
               </div>
               <div class="contact-item2">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Office</p>
-                <p>Moscow</p>
+                <p class="moon-color">Moscow</p>
               </div>
               <div class="contact-item3">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <p>E-Mail</p>
-                <p>dream.onlinebusiness@gmail.com</p>
+                <p class="moon-color">dream.onlinebusiness@gmail.com</p>
               </div>
               <div class="contact-item4">
                 <i class="fa fa-globe" area-hidden="true"></i>
                 <p>Website</p>
-                <p>under development <span>Sooon</span></p>
+                <p class="moon-color">under development <span>Sooon</span></p>
               </div>
             </div>
             <h3 class="contact-container-head2">send me an E-Mail</h3>
