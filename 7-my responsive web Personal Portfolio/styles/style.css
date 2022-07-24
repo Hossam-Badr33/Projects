@@ -24,9 +24,9 @@
 .padding {
   padding: 10px;
 }
-.color-scheme {
+/* .color-scheme {
   color: var(--main-color);
-}
+} */
 .flex {
   display: flex;
 }
@@ -70,7 +70,7 @@ body {
   position: fixed;
   top: 30px;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   background-color: var(--words-no-5);
 }
 .reduce-width {
@@ -132,6 +132,7 @@ body {
 }
 .main-page {
   /* overflow-x: hidden; */
+  /* overflow-y:auto; */
 }
 .btn {
   height: 70px;
@@ -149,6 +150,7 @@ body {
   height: 100%;
   position: fixed;
   border-right: 2px solid var(--words-no-4);
+  z-index: 10;
 }
 .aside .aside-head h2 {
   font-size: 40px;
@@ -206,6 +208,7 @@ body {
   display: flex;
   justify-content: space-between;
   transition: all 0.3s ease-in;
+  color: inherit;
 }
 .aside .aside-nav li a:hover {
   border-bottom: none;
@@ -216,17 +219,16 @@ body {
   margin-left: 20px;
 }
 .aside .hide {
-  position: fixed;
+  position: relative;
   width: 50px;
   height: 40px;
-  top: 10px;
-  left: 300px;
+  left: 325px;
   border-radius: 5px;
-  background-color: var(--bg-grade-I);
   box-shadow: 0px 0px 3px 1px var(--words-no-4);
   cursor: pointer;
   transition: all 0.5s ease-in;
   display: none;
+  z-index: 11;
 }
 .aside .hide .line {
   position: relative;
@@ -257,7 +259,27 @@ body {
 }
 .aside .hide:hover {
   transform: scaleX(1.2);
-  background-color: rgb(62, 62, 159);
+}
+.aside .fa-closing {
+  display: none;
+  position: absolute;
+  width: 32px;
+  height: 25px;
+  left: -4px;
+  top: -1px;
+  z-index: 1;
+  text-align: center;
+}
+.aside .fa-closing i {
+  height: 100%;
+  line-height: 25px;
+  display: block;
+  background-color: var(--bg-grade-III);
+  color: inherit;
+  width: 100%;
+  font-size: 30px;
+  border-radius: 5px;
+  color: var(--main-color);
 }
 /*.sections*/
 .sections {
@@ -277,7 +299,13 @@ body {
 .services,
 .portfolio,
 .contact {
-  overflow: hidden;
+  position: absolute;
+}
+#display {
+  display: none;
+}
+.about {
+  left: 10px;
 }
 .home-text {
   flex: 0 0 60%;
@@ -793,7 +821,10 @@ body {
 /*media*/
 @media screen and (max-width: 1280px) {
   .aside {
-    display: none;
+    left: -300px;
+  }
+  .main-page .hide {
+    display: inline-block;
   }
   .main-page {
     width: 100%;

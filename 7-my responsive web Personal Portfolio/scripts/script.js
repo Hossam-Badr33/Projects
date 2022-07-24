@@ -5,6 +5,7 @@ $(document).ready(function () {
   choice.click(function () {
     link.attr("href", $(this).data("link"));
   });
+
   //.control-color-light maximize and minimize
   let divControl = $(".control-color-light");
   let control = $(".fa-control i");
@@ -40,6 +41,7 @@ $(document).ready(function () {
       $(".aside").css({
         backgroundColor: "var(--bg-grade-I)",
       });
+      $(".fa-close").css({ backgroundColor: "var(--bg-grade-III)" });
       $("body").css({
         backgroundColor: "var(--bg-grade-III)",
       });
@@ -47,7 +49,7 @@ $(document).ready(function () {
       $(".moon-color, body").css({
         color: "var(--words-no-6)",
       });
-      $("body, .aside").css({
+      $("body, .aside, .fa-close").css({
         backgroundColor: "#000",
       });
     }
@@ -56,59 +58,72 @@ $(document).ready(function () {
   let navItem = $(".aside-nav a");
   navItem.each(function (i, e) {
     if (i > 0) {
+      let element = $("." + $(e).data("scroll"));
       $(e).removeClass("color-scheme");
-      $("." + $(e).data("scroll")).css({
-        width: 0,
-        height: 0,
+      element.css({
+        left: $(".main-page").innerWidth(),
       });
-      // console.log($("."+e.data("scroll")));
-      // $(e).css("width", 0);
+    } else {
+      $(e).css({
+        color: "var(--main-color)",
+      });
     }
   });
   $(window).scrollTop(0);
-  // $(window).resize(function () {
-  // });
-  let homeWidth = $(".home").width();
-  let aboutWidth = $(".about").width();
-  let servicesWidth = $(".services").width();
-  let portfolioWidth = $(".portfolio").width();
-  let contactWidth = $(".contact").width();
-  let homeHeight = $(".home").height();
-  let aboutHeight = $(".about").height();
-  let servicesHeight = $(".services").height();
-  let portfolioHeight = $(".portfolio").height();
-  let contactHeight = $(".contact").height();
-  console.log(homeWidth);
-  console.log(homeHeight);
-
   navItem.on("click", function (e) {
     e.preventDefault();
+    $("." + $(this).data("scroll"))
+      .removeAttr("id")
+      .siblings()
+      .attr("id", "display");
     $(this)
       .addClass("color-scheme")
       .parent("li")
       .siblings()
       .find("a")
       .removeClass("color-scheme");
+    if (
+      $(this).hasClass("color-scheme") &&
+      (light.hasClass("fa-sun") || light.hasClass("fa-moon"))
+    ) {
+      $(this)
+        .css("color", "var(--main-color)")
+        .parent("li")
+        .siblings()
+        .find("a")
+        .css("color", "");
+    }
     if ($(this).hasClass("color-scheme")) {
       $("." + $(this).data("scroll"))
         .siblings()
         .animate(
           {
-            width: 0,
-            height: 0,
+            left: $(".main-page").innerWidth(),
           },
-          300
+          200
         );
-      $("." + $(this).data("scroll")).delay(200).animate({
-        width: `${homeWidth}px`,
-        height: `${homeHeight}px`,
-      }, 500);
-    } else {
+      $("." + $(this).data("scroll")).animate(
+        {
+          left: 0,
+        },
+        1000
+      );
     }
-    // if ($(this).data("scroll") === "home") {
-    //   $(window).scrollTop(0);
-    // } else {
-    //   $(window).scrollTop($("." + $(this).data("scroll")).offset().top) - 5;
-    // }
   });
+  //.hide
+  let hide = $(".main-page .hide");
+  let aside = $(".aside");
+  let faClosing = $(".fa-closing");
+  hide.css({ top: hide.offset({ top: 15.2 }) });
+  hide.on("click", function () {
+    aside.toggleClass("active-aside");
+    if (aside.hasClass("active-aside")) {
+      aside.animate({ left: 0 }, { duration: 300, queue: false });
+      faClosing.fadeIn();
+    } else {
+      aside.animate({ left: "-300px" }, { duration: 300, queue: false });
+      faClosing.fadeOut();
+    }
+  });
+  console.log(hide.offset().top);
 });
